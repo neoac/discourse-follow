@@ -12,7 +12,7 @@ import EmberObject from "@ember/object";
 // component (in core as well) which expects a `UserStream` instance.
 
 export default RestModel.extend({
-  loading: true,
+  loading: false,
   itemsLoaded: 0,
   canLoadMore: true,
 
