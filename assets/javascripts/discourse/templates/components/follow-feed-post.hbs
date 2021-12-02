@@ -3,7 +3,7 @@
     {{avatar post.user imageSize="large" extraClasses="actor" ignoreTitle=true}}
   </a>
   <span class="time">{{format-date post.created_at leaveAgo="true"}}</span>
-  {{expand-post item=post}}
+  {{expanded-post item=post}}
 
   <div class="stream-topic-details">
     <div class="stream-topic-title">
@@ -16,5 +16,9 @@
 </div>
 
 <div class="excerpt">
-  {{post.expandedExcerpt}}
+  {{#if post.expandedExcerpt}}
+    {{html-safe post.expandedExcerpt}}
+  {{else}}
+    {{html-safe post.excerpt}}
+  {{/if}}
 </div>
