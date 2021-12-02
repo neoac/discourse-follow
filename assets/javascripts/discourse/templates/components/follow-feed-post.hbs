@@ -16,14 +16,5 @@
 </div>
 
 <div class="excerpt">
-  {{#if post.expandedExcerpt}}
-    {{html-safe post.expandedExcerpt}}
-  {{else}}
-    {{html-safe post.expandedExcerpt}}
-  {{/if}}
-  {{#if post.excerpt}}
-    {{html-safe post.expandedExcerpt}}
-  {{else}}
-    {{html-safe post.expandedExcerpt}}
-  {{/if}}
+  {{post.expandedExcerpt}}
 </div>
